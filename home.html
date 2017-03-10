@@ -3,12 +3,14 @@
      <head>
          <meta charset="utf-8">
          <title>#涂色未遂-生成最佳配色方案。</title>
-         <style type="text/css">
-
-         </style>
+         <script type="text/javascript" src="colorpicker.js"></script>
+         <link rel="stylesheet" type="text/css" href="colorpicker.css" />
      </head>
      <body>
-         <head>选色器</head>
+         <head>
+             <!--取色器-->
+             <div id="color-picker" class="cp-default"></div>
+         </head>
          <article>
              内容区
              <h2>#涂色未遂</h2>
@@ -17,7 +19,13 @@
          <footer id="footer">页脚菜单</footer>
 
          <script>
-         
+         ColorPicker(
+             document.getElementById("color-picker"),
+             function(hex, hsv, rgb) {
+                 console.log(hsv.h, hsv.s, hsv.v);         // [0-359], [0-1], [0-1]
+                 console.log(rgb.r, rgb.g, rgb.b);         // [0-255], [0-255], [0-255]
+                 document.body.style.backgroundColor = "rgba("+rgb.r+","+rgb.g+","+rgb.b+","+0.1+")";        // rgba
+        });
          </script>
      </body>
  </html>
