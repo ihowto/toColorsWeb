@@ -458,4 +458,7 @@
 
     window.ColorPicker = ColorPicker;
 
+    window.onresize = function(){
+        
+    }
 })(window, window.document);
