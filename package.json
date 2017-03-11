@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ihowto/toColorsWeb/issues"
   },
-  "homepage": "https://github.com/ihowto/toColorsWeb#readme"
+  "homepage": "https://github.com/ihowto/toColorsWeb#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "mongoose": "^4.8.6"
+  }
 }
