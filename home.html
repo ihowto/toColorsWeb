@@ -1,23 +1,64 @@
 <!DOCTYPE html>
- <html>
+ <html style="height: 100%;">
      <head>
          <meta charset="utf-8">
          <title>#涂色未遂-生成最佳配色方案。</title>
-         <style type="text/css">
-
-         </style>
+         <script type="text/javascript" src="http://www.keleyi.com/keleyi/pmedia/jquery-1.9.1.min.js"></script>
+         <script type="text/javascript" src="colorpicker.js"></script>
+         <link rel="stylesheet" type="text/css" href="colorpicker.css" />
      </head>
      <body>
-         <head>选色器</head>
+         <head>
+             <!--取色器-->
+             <div id="color-picker" class="cp-default"></div>
+             <button id="color-open-artist" style="float: right;">artist</button>
+         </head>
          <article>
-             内容区
+             <!--内容区-->
+             <div id="color-content">
              <h2>#涂色未遂</h2>
-             <cite>生成最佳配色方案。</cite>
+             <p>生成最佳配色方案。</p>
+             </div>
         </article>
-         <footer id="footer">页脚菜单</footer>
+         <footer id="footer">
+             
+         </footer>
+
+         <div id="color-artist">
+            <button id="color-close-artist"></button>
+            <h2>灵感来源:</h2>
+         </div>
 
          <script>
-         
+         ColorPicker(
+             document.getElementById("color-picker"),
+             function(hex, hsv, rgb) {
+                 console.log(hsv.h, hsv.s, hsv.v);         // [0-359], [0-1], [0-1]
+                 console.log(rgb.r, rgb.g, rgb.b);         // [0-255], [0-255], [0-255]
+                 document.body.style.backgroundColor = "rgba("+rgb.r+","+rgb.g+","+rgb.b+","+0.1+")";        // rgba
+        });
+
+        $("#color-open-artist").click(function() {
+            $("#color-artist").slideToggle(1000);
+            $("body").animate({
+                'scrollTop' : "+=300px"
+            }, 1000);
+        });
+
+        $("#color-close-artist").click(function() {
+            $("#color-artist").slideToggle(1000);
+            $("body").animate({
+                'scrollTop' : "-=300px"
+            }, 1000);
+        });
+
+        $(function(){  
+        $("#color-close-artist").hover(function(){  
+            $("#color-close-artist").css("opacity","1");
+        },function(){  
+            $("#color-close-artist").css("opacity","0.6");
+        })
+    })  
          </script>
      </body>
  </html>
