@@ -1,0 +1,25 @@
+{
+  "name": "tocolorweb",
+  "version": "1.0.0",
+  "description": "toColors is a web application that helps you generate color scheme",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihowto/toColorsWeb.git"
+  },
+  "author": "ihowto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ihowto/toColorsWeb/issues"
+  },
+  "homepage": "https://github.com/ihowto/toColorsWeb#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "mongoose": "^4.8.6"
+  }
+}
