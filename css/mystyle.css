@@ -1,0 +1,61 @@
+body{
+    font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";
+}
+#homeSlider {
+	font-weight: bold;
+	width: 100%;
+}
+#homeSlider .rsThumbsHor {
+	height: 60px;
+	padding: 0;
+}
+.rsDefaultInv,
+.rsDefaultInv .rsOverflow,
+.rsDefaultInv .rsSlide,
+.rsDefaultInv .rsVideoFrameHolder,
+.rsDefaultInv {
+	background: #fff6bf;
+}
+.rsDefaultInv .rsNavSelected {
+	background: #fff6bf;
+	color: #000;
+}
+#homeSlider > .rsContent {
+	height: auto;
+}
+.royalSlider > .rsContent h1,
+.royalSlider > .rsContent h2,
+.royalSlider > .rsContent img,
+.royalSlider > .rsContent .example-link {
+	display: none;
+}
+#homeSlider .rsThumb {
+	width: 172px;
+	height: 50px;
+	cursor: pointer;
+}
+#homeSlider .rsTmb {
+	text-align: center;
+	margin-top: 11px;
+	font-weight: bold;
+}
+#homeSlider .rsThumb i {
+	font-style: normal;
+	font-weight: bold;
+}
+@media screen and (min-width: 0px) and (max-width: 960px) {
+#homeSlider .rsThumb {
+	font-size: 12px;
+	width: 115px;
+	height: 50px;
+	cursor: pointer;
+}
+#homeSlider .rsTmb {
+	margin-top: 18px;
+}
+}
+ @media screen and (min-width: 0px) and (max-width: 500px) {
+.royalSlider {
+	height: 300px !important;
+}
+}
