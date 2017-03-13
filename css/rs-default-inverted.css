@@ -1,0 +1,161 @@
+/******************************
+*
+*  RoyalSlider Default Inverted Skin 
+*
+*    1. Arrows 
+*    2. Bullets
+*    3. Thumbnails
+*    4. Tabs
+*    5. Fullscreen button
+*    6. Play/close video button
+*    7. Preloader
+*    8. Caption
+*    
+*  Sprite: 'rs-default-inverted.png'
+*  Feel free to edit anything
+*  If you don't some part - just delete it
+* 
+******************************/
+
+
+/* Background */
+.rsDefaultInv,
+.rsDefaultInv .rsOverflow,
+.rsDefaultInv .rsSlide,
+.rsDefaultInv .rsVideoFrameHolder,
+.rsDefaultInv .rsThumbs {
+	background: #fff;
+	color: #222;
+}
+/***************
+*
+*  3. Thumbnails
+*
+****************/
+
+.rsDefaultInv .rsThumbsHor {
+	width: 100%;
+	height: 72px;
+}
+.rsDefaultInv .rsThumbsVer {
+	width: 96px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.rsDefaultInv.rsWithThumbsHor .rsThumbsContainer {
+	position: relative;
+	height: 100%;
+}
+.rsDefaultInv.rsWithThumbsVer .rsThumbsContainer {
+	position: relative;
+	width: 100%;
+}
+.rsDefaultInv .rsThumb {
+	float: left;
+	overflow: hidden;
+	width: 96px;
+	height: 72px;
+}
+.rsDefaultInv .rsThumb img {
+	width: 100%;
+	height: 100%;
+}
+.rsDefaultInv .rsThumb.rsNavSelected {
+	background: #fff6bf;
+}
+.rsDefaultInv .rsThumb.rsNavSelected img {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+.rsDefaultInv .rsTmb {
+	display: block;
+}
+/* Thumbnails with text */
+.rsDefaultInv .rsTmb h5 {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	line-height: 20px;
+}
+.rsDefaultInv .rsTmb span {
+	color: #DDD;
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	line-height: 18px;
+}
+/* Thumbnails arrow icons */
+.rsDefaultInv .rsThumbsArrow {
+	height: 100%;
+	width: 20px;
+	position: absolute;
+	display: block;
+	cursor: pointer;
+	z-index: 21;
+	background: #FFF;
+	background: rgba(255,255,255,0.75);
+}
+.rsDefaultInv .rsThumbsArrow:hover {
+	background: rgba(255,255,255,0.9);
+}
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrow {
+	width: 100%;
+	height: 20px;
+}
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowLeft {
+	top: 0;
+	left: 0;
+}
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowRight {
+	bottom: 0;
+	left: 0;
+}
+.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowLeft {
+	left: 0;
+	top: 0;
+}
+.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowRight {
+	right: 0;
+	top: 0;
+}
+.rsDefaultInv .rsThumbsArrowIcn {
+	width: 16px;
+	height: 16px;
+	top: 50%;
+	left: 50%;
+	margin-top: -8px;
+	margin-left: -8px;
+	position: absolute;
+	cursor: pointer;
+	background: url(../img/rs-default-inverted.png);
+}
+.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn {
+	background-position: -128px -32px;
+}
+.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn {
+	background-position: -128px -48px;
+}
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn {
+	background-position: -144px -32px;
+}
+.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn {
+	background-position: -144px -48px;
+}
+.rsDefaultInv .rsThumbsArrowDisabled {
+	display: none !important;
+}
+
+/* Thumbnails resizing on smaller screens */
+@media screen and (min-width: 0px) and (max-width: 800px) {
+.rsDefaultInv .rsThumb {
+	width: 59px;
+	height: 44px;
+}
+.rsDefaultInv .rsThumbsHor {
+	height: 44px;
+}
+.rsDefaultInv .rsThumbsVer {
+	width: 59px;
+}
